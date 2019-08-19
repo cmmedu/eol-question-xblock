@@ -1,0 +1,9 @@
+/* CSS for EolQuestionXBlock */
+
+.eolquestion_block .count {
+    font-weight: bold;
+}
+
+.eolquestion_block p {
+    cursor: pointer;
+}
