@@ -1,15 +1,13 @@
+{% load i18n %}
+
 <div class="eolquestion_block">
-<p>EolQuestionXBlock: count is now
-    <span class='count'>{self.count}</span> (click me to increment).
-</p>
-</div>
-<div class="question-block">
-    <div class="tooltip index qualified">1
-        <span class="tooltiptext qualified">Pregunta Calificada</span>
+    <div class="tooltip index {% if xblock.type == 'No Calificada' %} No-Calificada {% else %} {{xblock.type}} {% endif %}">
+        {{xblock.index}}
+        <span class="tooltiptext">{% trans "Pregunta" %} {{xblock.type}}</span>
     </div>
     <div class="separator"></div>
     <div class="text">
-        Sample text
+        {{xblock.text}}
     </div>
     <div style="clear:both;"></div>
 </div>

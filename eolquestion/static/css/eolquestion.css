@@ -1,14 +1,6 @@
 /* CSS for EolQuestionXBlock */
 
-.eolquestion_block .count {
-    font-weight: bold;
-}
-
-.eolquestion_block p {
-    cursor: pointer;
-}
-
-.question-block {
+.eolquestion_block {
     position: relative;
     width: 80vw;
     border-radius: 10px;
@@ -19,7 +11,7 @@
     margin: 20px auto;
 }
 
-.question-block .index {
+.eolquestion_block .index {
     width: 25px;
     height: 25px;
     color: #fff;
@@ -32,7 +24,7 @@
     line-height: 25px;
 }
 
-.question-block .separator {
+.eolquestion_block .separator {
     width: 1px;
     height: 40px;
     background-color: #a7a7a7;
@@ -43,7 +35,7 @@
     float: left;
 }
 
-.question-block .text {
+.eolquestion_block .text {
     color: #464646;
     font-weight: bold;
     text-align: justify;
@@ -51,15 +43,15 @@
     margin-left: calc(10px + 25px + 10px);
 }
 
-.question-block .not-qualified {
-    background-color: #dc0000;
-}
-
-.question-block .qualified {
+.eolquestion_block .Calificada {
     background-color: #0062dc;
 }
 
-.question-block .control {
+.eolquestion_block .No-Calificada {
+    background-color: #dc0000 !important;
+}
+
+.eolquestion_block .Control {
     background-color: #00dc76;
 }
 
