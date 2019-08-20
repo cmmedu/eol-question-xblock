@@ -1,9 +1,9 @@
 {% load i18n %}
 
 <div class="eolquestion_block">
-    <div class="tooltip index {% if xblock.type == 'No Calificada' %} No-Calificada {% else %} {{xblock.type}} {% endif %}">
+    <div class="q-tooltip index {% if xblock.type == 'No Calificada' %} No-Calificada {% else %} {{xblock.type}} {% endif %}">
         {{xblock.index}}
-        <span class="tooltiptext">{% trans "Pregunta" %} {{xblock.type}}</span>
+        <span class="q-tooltiptext">{% trans "Pregunta" %} {{xblock.type}}</span>
     </div>
     <div class="separator"></div>
     <div class="text">

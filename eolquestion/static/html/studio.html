@@ -1,0 +1,45 @@
+{% load i18n %}
+<div class="wrapper-comp-settings is-active editor-with-buttons" id="settings-tab">
+  <ul class="list-input settings-list">
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="type">{% trans field_type.display_name %}</label>
+        <select name="type" id="type">
+            {% for option in field_type.values %}
+            <option value="{{ option }}" {% if option == xblock.type %}selected{% endif %}>{% trans option %}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <span class="tip setting-help">{% trans field_type.help %}</span>
+    </li>
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="index">{% trans field_index.display_name %}</label>
+        <input class="input setting-input" name="index" id="index" 
+            value="{{xblock.index}}"
+            pattern="\d*"
+            step="{{ field_index.values.step }}"
+            min="{{ field_index.values.min }}"
+            type="number" />
+      </div>
+      <span class="tip setting-help">{% trans field_index.help %}</span>
+    </li>
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="text">{% trans field_text.display_name %}</label>
+        <input class="input setting-input" name="text" id="text" value="{{xblock.text}}" minlength="{{ field_text.values.minlength }}" type="text" />
+      </div>
+      <span class="tip setting-help">{% trans field_text.help %}</span>
+    </li>
+  </ul>
+  <div class="xblock-actions">
+    <ul>
+      <li class="action-item">
+        <a href="#" class="button action-primary save-button">{% trans "Save" %}</a>
+      </li>
+      <li class="action-item">
+        <a href="#" class="button cancel-button">{% trans "Cancel" %}</a>
+      </li>
+    </ul>
+  </div>
+</div>

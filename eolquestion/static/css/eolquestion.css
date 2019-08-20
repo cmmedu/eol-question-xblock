@@ -2,7 +2,7 @@
 
 .eolquestion_block {
     position: relative;
-    width: 80vw;
+    width: 90%;
     border-radius: 10px;
     background-color: #f1f2f4;
     padding: 20px;
@@ -55,12 +55,12 @@
     background-color: #00dc76;
 }
 
-.tooltip {
+.q-tooltip {
     cursor: help;
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.q-tooltip .q-tooltiptext {
     visibility: hidden;
     width: 200px;
     background-color: #555;
@@ -82,7 +82,7 @@
 }
   
 /* Tooltip arrow */
-.tooltip .tooltiptext::after {
+.q-tooltip .q-tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -94,7 +94,7 @@
 }
   
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.q-tooltip:hover .q-tooltiptext {
     visibility: visible;
     opacity: 1;
 }

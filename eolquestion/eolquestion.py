@@ -1,8 +1,10 @@
-"""TO-DO: Write a description of what this XBlock is."""
-
+import json
 import pkg_resources
 
 from django.template import Context, Template
+
+from webob import Response
+
 from xblock.core import XBlock
 from xblock.fields import Integer, String, Scope
 from xblock.fragment import Fragment
@@ -13,11 +15,24 @@ _ = lambda text: text
 
 class EolQuestionXBlock(XBlock):
 
-    # TYPE : [Calificada, No Calificada, Control]
+    display_name = String(
+        display_name=_("Display Name"),
+        help=_("Display name for this module"),
+        default="Eol Question XBlock",
+        scope=Scope.settings,
+    )
+
+    icon_class = String(
+        default="other",
+        scope=Scope.settings,
+    )
+
+    # TYPE
     type = String(
         display_name = _("Tipo"),
         help = _("Selecciona el tipo de pregunta"),
-        default = 'Calificada',
+        default = "No Calificada",
+        values = ["Calificada", "No Calificada", "Control"],
         scope = Scope.settings
     )
 
@@ -25,7 +40,7 @@ class EolQuestionXBlock(XBlock):
     index = Integer(
         display_name = _("Indice"),
         help = _("Indica el indice de la pregunta"),
-        default = 3,
+        default = 1,
         values = { "min" : 1, "step" : 1 },
         scope = Scope.settings
     )
@@ -34,7 +49,7 @@ class EolQuestionXBlock(XBlock):
     text = String(
         display_name = _("Enunciado"),
         help = _("Indica el enunciado de la pregunta"),
-        default = 'texto de prueba ',
+        default = 'Enunciado ',
         values = { "minlength" : 5 },
         scope = Scope.settings
     )
@@ -46,7 +61,7 @@ class EolQuestionXBlock(XBlock):
         return data.decode("utf8")
 
     def student_view(self, context=None):
-        context_html = self.get_context_student()
+        context_html = self.get_context()
         template = self.render_template('static/html/eolquestion.html', context_html)
         frag = Fragment(template)
         frag.add_css(self.resource_string("static/css/eolquestion.css"))
@@ -54,11 +69,23 @@ class EolQuestionXBlock(XBlock):
         frag.initialize_js('EolQuestionXBlock')
         return frag
 
-    #TODO: studio_view
+    def studio_view(self, context=None):
+        context_html = self.get_context()
+        template = self.render_template('static/html/studio.html', context_html)
+        frag = Fragment(template)
+        frag.add_css(self.resource_string("static/css/eolquestion.css"))
+        frag.add_javascript(self.resource_string("static/js/src/studio.js"))
+        frag.initialize_js('EolQuestionStudioXBlock')
+        return frag
 
-    #TODO: studio_submit
+    @XBlock.handler
+    def studio_submit(self, request, suffix=''):
+        self.type = request.params['type']
+        self.index = request.params['index']
+        self.text = request.params['text']
+        return Response(json.dumps({'result': 'success'}), content_type='application/json')
 
-    def get_context_student(self):
+    def get_context(self):
         return {
             'field_type': self.fields['type'],
             'field_index': self.fields['index'],
