@@ -2,7 +2,7 @@ function EolQuestionStudioXBlock(runtime, element) {
 
     var handlerUrl = runtime.handlerUrl(element, 'studio_submit');
   
-    $(element).find('.save-button').bind('click', function() {
+    $(element).find('.save-button').bind('click', function(e) {
       var form_data = new FormData();
       var type = $(element).find('select[name=type]').val();
       var index = Math.floor( $(element).find('input[name=index]').val());
@@ -25,6 +25,7 @@ function EolQuestionStudioXBlock(runtime, element) {
           runtime.notify('save', {state: 'end'});
         }
       });
+      e.preventDefault();
   
     });
   
