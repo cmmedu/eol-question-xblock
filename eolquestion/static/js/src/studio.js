@@ -8,10 +8,14 @@ function EolQuestionStudioXBlock(runtime, element) {
       var index = Math.floor( $(element).find('input[name=index]').val());
       var text = $(element).find('input[name=text]').val();
       text = text ? text : 'Enunciado no especificado';
+      var theme = $(element).find('select[name=theme]').val();
       form_data.append('type', type);
       form_data.append('index', index);
       form_data.append('text', text);
-      runtime.notify('save', {state: 'start'});
+      form_data.append('theme', theme);
+      if ($.isFunction(runtime.notify)) {
+        runtime.notify('save', {state: 'start'});
+      }
   
       $.ajax({
         url: handlerUrl,
@@ -22,7 +26,9 @@ function EolQuestionStudioXBlock(runtime, element) {
         data: form_data,
         type: "POST",
         success: function(response){
-          runtime.notify('save', {state: 'end'});
+          if ($.isFunction(runtime.notify)) {
+            runtime.notify('save', {state: 'end'});
+          }
         }
       });
       e.preventDefault();

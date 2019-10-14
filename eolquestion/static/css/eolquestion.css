@@ -98,3 +98,66 @@
     visibility: visible;
     opacity: 1;
 }
+
+/* CSS for EolQuestionXBlock Media Theme */
+
+.eolquestion_block.Media {
+    border-radius: 15px 15px 15px 15px;
+    border: 2px solid #F9F0FC;
+    background-color: transparent;
+    padding: 15px;
+}
+
+.eolquestion_block.Media .index {
+    width: 40px;
+    height: 100%;
+    border-radius: 14px 0px 0px 14px;
+    top: 0px;
+    left: 0px;
+}
+
+.eolquestion_block.Media .index:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    bottom: -2px;
+    right: 0px;
+    border: 3px #E71F24 solid;
+    border-radius: 14px 0px 0px 14px;
+}
+
+.eolquestion_block.Media .text {
+    margin-left: calc(10px + 30px + 10px);
+}
+
+.eolquestion_block.Media .index-number {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -12.5px;
+    font-size: 20px;
+}
+
+.eolquestion_block.Media .separator {
+    height: 100%;
+    background-color: #E71F24;
+    top: 0px;
+    width: 5px;
+    left: calc(10px + 23px + 10px);
+}
+
+.eolquestion_block.Media .separator:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    width: 4px;
+    background-color: #E71F24;
+    border: 1px #E71F24 solid;
+}
+
+.eolquestion_block.Media .No-Calificada {
+    background-color: #E71F24 !important;
+}

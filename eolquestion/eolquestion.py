@@ -53,7 +53,15 @@ class EolQuestionXBlock(XBlock):
         values = { "minlength" : 5 },
         scope = Scope.settings
     )
-
+    
+    # THEME
+    theme = String(
+        display_name = _("Estilo"),
+        help = _("Cambiar estilo de la pregunta"),
+        default = "SumaySigue",
+        values = ["SumaySigue", "Media"],
+        scope = Scope.settings
+    )
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
@@ -83,6 +91,7 @@ class EolQuestionXBlock(XBlock):
         self.type = request.params['type']
         self.index = request.params['index']
         self.text = request.params['text']
+        self.theme = request.params['theme']
         return Response(json.dumps({'result': 'success'}), content_type='application/json')
 
     def get_context(self):
@@ -90,6 +99,7 @@ class EolQuestionXBlock(XBlock):
             'field_type': self.fields['type'],
             'field_index': self.fields['index'],
             'field_text': self.fields['text'],
+            'field_theme': self.fields['theme'],
             'xblock': self
         }
     
