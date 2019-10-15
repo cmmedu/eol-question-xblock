@@ -33,6 +33,17 @@
     </li>
     <li class="field comp-setting-entry is-set">
       <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="theme">{% trans field_theme.display_name %}</label>
+        <select name="theme" id="theme">
+            {% for option in field_theme.values %}
+            <option value="{{ option }}" {% if option == xblock.theme %}selected{% endif %}>{% trans option %}</option>
+            {% endfor %}
+        </select>
+      </div>
+      <span class="tip setting-help">{% trans field_theme.help %}</span>
+    </li>
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
         <label class="label setting-label" for="id">{% trans "ID de la Ubicación del componente" %}</label>
         <span class="setting-text">{{ xblock.location }}</span>
       </div>
