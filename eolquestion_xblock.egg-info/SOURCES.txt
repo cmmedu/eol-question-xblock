@@ -1,10 +1,13 @@
+README.md
 setup.py
 eolquestion/__init__.py
 eolquestion/eolquestion.py
 eolquestion/static/README.txt
 eolquestion/static/css/eolquestion.css
 eolquestion/static/html/eolquestion.html
+eolquestion/static/html/studio.html
 eolquestion/static/js/src/eolquestion.js
+eolquestion/static/js/src/studio.js
 eolquestion_xblock.egg-info/PKG-INFO
 eolquestion_xblock.egg-info/SOURCES.txt
 eolquestion_xblock.egg-info/dependency_links.txt
