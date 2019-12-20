@@ -44,15 +44,21 @@
 }
 
 .eolquestion_block .Calificada {
+    /*
     background-color: #0062dc;
+    */
+    background-color: #dc0000;
 }
 
 .eolquestion_block .No-Calificada {
-    background-color: #dc0000 !important;
+    background-color: #dc0000;
 }
 
 .eolquestion_block .Control {
+    /*
     background-color: #00dc76;
+    */
+    background-color: #dc0000 ;
 }
 
 .q-tooltip {
@@ -134,7 +140,10 @@
     left: -1px;
     bottom: -2px;
     right: 0px;
+    border: 3px #612871 solid;
+    /*
     border: 3px #00dc76 solid;
+    */
     border-radius: 14px 0px 0px 14px;
 }
 
@@ -145,7 +154,10 @@
     left: -1px;
     bottom: -2px;
     right: 0px;
+    border: 3px #612871 solid;
+    /*
     border: 3px #0062dc solid;
+    */
     border-radius: 14px 0px 0px 14px;
 }
 
@@ -166,6 +178,9 @@
 .eolquestion_block.Media .separator {
     height: 100%;
     background-color: #612871;
+    /*
+    background-color: #612871;
+    */
     top: 0px;
     width: 4px;
     left: calc(10px + 23px + 10px);
@@ -179,11 +194,18 @@
     width: 4px;
     background-color: #612871;
     border: 1px #612871 solid;
+    /*
+    background-color: #612871;
+    border: 1px #612871 solid;
+    */
 }
 
 .eolquestion_block.Media-Control .separator {
     height: 100%;
+    background-color: #612871;
+    /*
     background-color: #00dc76;
+    */
     top: 0px;
     width: 5px;
     left: calc(10px + 23px + 10px);
@@ -195,13 +217,20 @@
     top: -2px;
     bottom: -2px;
     width: 4px;
+    background-color: #612871;
+    border: 1px #612871 solid;
+    /*
     background-color: #00dc76;
     border: 1px #00dc76 solid;
+    */
 }
 
 .eolquestion_block.Media-Calificada .separator {
     height: 100%;
+    background-color: #612871;
+    /*
     background-color: #0062dc;
+    */
     top: 0px;
     width: 5px;
     left: calc(10px + 23px + 10px);
@@ -213,10 +242,20 @@
     top: -2px;
     bottom: -2px;
     width: 4px;
+    background-color: #612871;
+    border: 1px #612871 solid;
+    /*
     background-color: #0062dc;
     border: 1px #0062dc solid;
+    */
 }
 
+.eolquestion_block.Media .Control {
+    background-color: #612871 !important;
+}
 .eolquestion_block.Media .No-Calificada {
+    background-color: #612871 !important;
+}
+.eolquestion_block.Media .Calificada {
     background-color: #612871 !important;
 }
