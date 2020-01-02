@@ -59,7 +59,7 @@ class EolQuestionXBlock(XBlock):
         display_name = _("Estilo"),
         help = _("Cambiar estilo de la pregunta"),
         default = "SumaySigue",
-        values = ["SumaySigue", "Media"],
+        values = ["SumaySigue", "Media", "Didactica"],
         scope = Scope.settings
     )
 
