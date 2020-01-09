@@ -259,3 +259,126 @@
 .eolquestion_block.Media .Calificada {
     background-color: #612871 !important;
 }
+
+/* CSS for EolQuestionXBlock Didactica Theme */
+
+.eolquestion_block.Didactica {
+    border-radius: 15px 15px 15px 15px;
+    border: 1px solid #f6bfc0;;
+    background-color: transparent;
+    padding: 15px;
+}
+
+.eolquestion_block.Didactica .index {
+    width: 50px;
+    height: 100%;
+    border-radius: 14px 0px 0px 14px;
+    top: 0px;
+    left: 0px;
+}
+
+.eolquestion_block.Didactica .index:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    bottom: -2px;
+    right: 0px;
+    border: 3px #e71f24 solid;
+    border-radius: 14px 0px 0px 14px;
+}
+
+.eolquestion_block.Didactica.Didactica-Control .index:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    bottom: -2px;
+    right: 0px;
+    border: 3px #e71f24 solid;
+    border-radius: 14px 0px 0px 14px;
+}
+
+.eolquestion_block.Didactica.Didactica-Calificada .index:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -1px;
+    bottom: -2px;
+    right: 0px;
+    border: 3px #e71f24 solid;
+    border-radius: 14px 0px 0px 14px;
+}
+
+.eolquestion_block.Didactica .text {
+    margin-left: calc(10px + 45px + 10px);
+    line-height: 50px;
+}
+
+.eolquestion_block.Didactica .index-number {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -12.5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.eolquestion_block.Didactica .separator {
+    height: 100%;
+    background-color: #e71f24;
+    top: 0px;
+    width: 4px;
+    left: calc(10px + 34px + 10px);
+}
+
+.eolquestion_block.Didactica .separator:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    width: 4px;
+    background-color: #e71f24;
+    border: 1px #e71f24 solid;
+}
+
+.eolquestion_block.Didactica-Control .separator {
+    height: 100%;
+    background-color: #e71f24;
+    top: 0px;
+    width: 5px;
+    left: calc(10px + 34px + 10px);
+}
+
+.eolquestion_block.Didactica-Control .separator:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    width: 4px;
+    background-color: #e71f24;
+    border: 1px #e71f24 solid;
+}
+
+.eolquestion_block.Didactica-Calificada .separator {
+    height: 100%;
+    background-color: #e71f24;
+    top: 0px;
+    width: 5px;
+    left: calc(10px + 34px + 10px);
+}
+
+.eolquestion_block.Didactica-Calificada .separator:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    width: 4px;
+    background-color: #e71f24;
+    border: 1px #e71f24 solid;
+}
+
+.eolquestion_block.Didactica .No-Calificada {
+    background-color: #e71f24 !important;
+}
