@@ -115,4 +115,44 @@ class EolQuestionXBlock(XBlock):
             ("EolQuestionXBlock",
              """<eolquestion/>
              """),
+            ("Multiple EolQuestionXBlock",
+             """<vertical_demo>
+                <eolquestion
+                theme='SumaySigue'
+                type='Calificada'
+                />
+                <eolquestion
+                theme='SumaySigue'
+                type='No Calificada'
+                />
+                <eolquestion
+                theme='SumaySigue'
+                type='Control'
+                />
+                <eolquestion
+                theme='Media'
+                type='Calificada'
+                />
+                <eolquestion
+                theme='Media'
+                type='No Calificada'
+                />
+                <eolquestion
+                theme='Media'
+                type='Control'
+                />
+                <eolquestion
+                theme='Didactica'
+                type='Calificada'
+                />
+                <eolquestion
+                theme='Didactica'
+                type='No Calificada'
+                />
+                <eolquestion
+                theme='Didactica'
+                type='Control'
+                />
+                </vertical_demo>
+             """),
         ]
