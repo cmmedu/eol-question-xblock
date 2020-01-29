@@ -312,7 +312,9 @@
 
 .eolquestion_block.Didactica .text {
     margin-left: calc(10px + 45px + 10px);
-    line-height: 50px;
+    line-height: 25px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .eolquestion_block.Didactica .index-number {
