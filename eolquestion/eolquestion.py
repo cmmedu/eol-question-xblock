@@ -92,7 +92,7 @@ class EolQuestionXBlock(XBlock):
         self.index = request.params['index']
         self.text = request.params['text']
         self.theme = request.params['theme']
-        return Response(json.dumps({'result': 'success'}), content_type='application/json')
+        return Response({'result': 'success'}, content_type='application/json')
 
     def get_context(self):
         return {
