@@ -88,6 +88,7 @@ class EolQuestionXBlock(XBlock):
 
     @XBlock.handler
     def studio_submit(self, request, suffix=''):
+        self.display_name = request.params['display_name']
         self.type = request.params['type']
         self.index = request.params['index']
         self.text = request.params['text']
@@ -96,6 +97,7 @@ class EolQuestionXBlock(XBlock):
 
     def get_context(self):
         return {
+            'field_display_name': self.fields['display_name'],
             'field_type': self.fields['type'],
             'field_index': self.fields['index'],
             'field_text': self.fields['text'],
