@@ -135,6 +135,7 @@ class TestEolQuestionXBlock(UrlResetMixin, ModuleStoreTestCase):
         request = TestRequest()
         request.method = 'POST'
         post_data = {
+            "display_name" : "Display Name",
             'type': 'Control',
             'index': 7,
             'text': 'Texto Enunciado',
@@ -144,6 +145,7 @@ class TestEolQuestionXBlock(UrlResetMixin, ModuleStoreTestCase):
         request.body = data
         request.params = post_data
         response = self.xblock.studio_submit(request)
+        self.assertEqual(self.xblock.display_name, 'Display Name')
         self.assertEqual(self.xblock.type, 'Control')
         self.assertEqual(self.xblock.index, 7)
         self.assertEqual(self.xblock.text, 'Texto Enunciado')
