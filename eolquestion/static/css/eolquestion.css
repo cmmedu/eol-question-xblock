@@ -411,9 +411,10 @@
     left: 10px;
 }
 
-.eolquestion_block.RedFid .index .span{
+.eolquestion_block.RedFid .index .index-number{
     line-height: 25px;
-    padding-top: 8px;   
+    padding-top: 8px;
+    font-weight: bold;
 }
 
 .eolquestion_block.RedFid .separator {
