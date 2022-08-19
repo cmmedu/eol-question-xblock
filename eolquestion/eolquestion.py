@@ -59,7 +59,7 @@ class EolQuestionXBlock(XBlock):
         display_name = _("Estilo"),
         help = _("Cambiar estilo de la pregunta"),
         default = "SumaySigue",
-        values = ["SumaySigue", "Media", "Didactica"],
+        values = ["SumaySigue", "Media", "Didactica","RedFid"],
         scope = Scope.settings
     )
 
@@ -120,40 +120,52 @@ class EolQuestionXBlock(XBlock):
             ("Multiple EolQuestionXBlock",
              """<vertical_demo>
                 <eolquestion
-                theme='SumaySigue'
-                type='Calificada'
+                    theme='SumaySigue'
+                    type='Calificada'
                 />
                 <eolquestion
-                theme='SumaySigue'
-                type='No Calificada'
+                    theme='SumaySigue'
+                    type='No Calificada'
                 />
                 <eolquestion
-                theme='SumaySigue'
-                type='Control'
+                    theme='SumaySigue'
+                    type='Control'
                 />
                 <eolquestion
-                theme='Media'
-                type='Calificada'
+                    theme='Media'
+                    type='Calificada'
                 />
                 <eolquestion
-                theme='Media'
-                type='No Calificada'
+                    theme='Media'
+                    type='No Calificada'
                 />
                 <eolquestion
-                theme='Media'
-                type='Control'
+                    theme='Media'
+                    type='Control'
                 />
                 <eolquestion
-                theme='Didactica'
-                type='Calificada'
+                    theme='Didactica'
+                    type='Calificada'
                 />
                 <eolquestion
-                theme='Didactica'
-                type='No Calificada'
+                    theme='Didactica'
+                    type='No Calificada'
                 />
                 <eolquestion
-                theme='Didactica'
-                type='Control'
+                    theme='Didactica'
+                    type='Control'
+                />
+                <eolquestion
+                    theme='RedFid'
+                    type='Calificada'
+                />
+                <eolquestion
+                    theme='RedFid'
+                    type='No Calificada'
+                />
+                <eolquestion
+                    theme='RedFid'
+                    type='Control'
                 />
                 </vertical_demo>
              """),
