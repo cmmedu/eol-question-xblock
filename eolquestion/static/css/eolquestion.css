@@ -396,6 +396,7 @@
     box-sizing: border-box;
     display: block;
     margin: 20px auto;
+    background-color: #fff0;
 }
 
 .eolquestion_block.RedFid .index {
@@ -414,7 +415,7 @@
 .eolquestion_block.RedFid .separator {
     width: 1px;
     height: 40px;
-    /*background-color: #a7a7a7;*/
+    background-color: #fff0;
     /*color: #fff;*/
     position: absolute;
     top: calc(50% - 20px);
