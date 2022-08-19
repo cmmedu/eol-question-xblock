@@ -409,11 +409,10 @@
     position: absolute;
     top: calc(50% - 21px);
     left: 10px;
+    padding-top: 8px;
 }
 
 .eolquestion_block.RedFid .index .index-number{
-    line-height: 25px;
-    padding-top: 8px;
     font-weight: bold;
 }
 
