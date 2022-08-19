@@ -384,3 +384,66 @@
 .eolquestion_block.Didactica .No-Calificada {
     background-color: #e71f24 !important;
 }
+
+/* CSS RedFid */
+
+
+.eolquestion_block.RedFid{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: block;
+    margin: 20px auto;
+}
+
+.eolquestion_block.RedFid .index {
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    top: calc(50% - 12.5px);
+    left: 10px;
+    line-height: 25px;
+}
+
+.eolquestion_block.RedFid .separator {
+    width: 1px;
+    height: 40px;
+    /*background-color: #a7a7a7;*/
+    /*color: #fff;*/
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(10px + 25px + 10px);
+    float: left;
+}
+
+.eolquestion_block.RedFid .text {
+    color: #282828;
+    font-weight: bold;
+    text-align: justify;
+    position: relative;
+    margin-left: calc(10px + 25px + 10px);
+}
+
+.eolquestion_block.RedFid .Calificada {
+    /*
+    background-color: #0062dc;
+    */
+    background-color: #0C8AA8;
+}
+
+.eolquestion_block.RedFid .No-Calificada {
+    background-color: #0C8AA8;
+}
+
+.eolquestion_block.RedFid .Control {
+    /*
+    background-color: #00dc76;
+    */
+    background-color: #0C8AA8 ;
+}
