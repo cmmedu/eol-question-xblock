@@ -63,6 +63,31 @@ class EolQuestionXBlock(XBlock):
         scope = Scope.settings
     )
 
+    #Asignacion a de color preguntas antiguas
+    prevDefautltColor = '#e71f24'
+    if theme == "Media":
+        prevDefautltColor = '#612871'
+    elif theme == "RedFid":
+        prevDefautltColor = '#0c8aa8'
+
+    # COLOR
+    color = String(
+        display_name = _("Color"),
+        help = _("Color de la pregunta"),
+        values = { "minlength" : 4 },
+        default = prevDefautltColor,
+        scope = Scope.settings
+    )
+
+    # ID SPECIFIC
+    idspecific = String(
+        display_name = _("ID específico"),
+        help = _("definir un identificador para la pregunta"),
+        default = '1',
+        values = { "minlength" : 1 },
+        scope = Scope.settings
+    )
+
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
         data = pkg_resources.resource_string(__name__, path)
@@ -74,6 +99,7 @@ class EolQuestionXBlock(XBlock):
         frag = Fragment(template)
         frag.add_css(self.resource_string("static/css/eolquestion.css"))
         frag.add_javascript(self.resource_string("static/js/src/eolquestion.js"))
+
         frag.initialize_js('EolQuestionXBlock')
         return frag
 
@@ -93,6 +119,8 @@ class EolQuestionXBlock(XBlock):
         self.index = request.params['index']
         self.text = request.params['text']
         self.theme = request.params['theme']
+        self.color = request.params['color']
+        self.idspecific = request.params['idspecific']
         return Response({'result': 'success'}, content_type='application/json')
 
     def get_context(self):
@@ -102,6 +130,8 @@ class EolQuestionXBlock(XBlock):
             'field_index': self.fields['index'],
             'field_text': self.fields['text'],
             'field_theme': self.fields['theme'],
+            'field_color': self.fields['color'],
+            'field_idspecific': self.fields['idspecific'],
             'xblock': self
         }
     

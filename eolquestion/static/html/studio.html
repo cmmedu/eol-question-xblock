@@ -51,6 +51,20 @@
     </li>
     <li class="field comp-setting-entry is-set">
       <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="color">{% trans field_color.display_name %}</label>
+        <input class="input setting-input" name="color" id="color" value="{{xblock.color}}" minlength="{{ field_color.values.minlength }}" type="text" />
+      </div>
+      <span class="tip setting-help">{% trans field_color.help %}</span>
+    </li>
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="idspecific">{% trans field_idspecific.display_name %}</label>
+        <input class="input setting-input" name="idspecific" id="idspecific" value="{{xblock.idspecific}}" minlength="{{ field_idspecific.values.minlength }}" type="text" />
+      </div>
+      <span class="tip setting-help">{% trans field_idspecific.help %}</span>
+    </li>
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
         <label class="label setting-label" for="id">{% trans "ID de la Ubicación del componente" %}</label>
         <span class="setting-text">{{ xblock.location }}</span>
       </div>
