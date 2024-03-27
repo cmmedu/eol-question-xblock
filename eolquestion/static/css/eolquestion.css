@@ -117,7 +117,7 @@
 .eolquestion_block.Media .index {
     width: 40px;
     height: 100%;
-    border-radius: 14px 0px 0px 14px;
+    border-radius: 12px 0px 0px 12px;
     top: 0px;
     left: 0px;
 }
@@ -129,8 +129,10 @@
     left: -1px;
     bottom: -2px;
     right: 0px;
+    /*
     border: 3px #612871 solid;
     border-radius: 14px 0px 0px 14px;
+    */
 }
 
 .eolquestion_block.Media.Media-Control .index:after {
@@ -140,9 +142,8 @@
     left: -1px;
     bottom: -2px;
     right: 0px;
-    border: 3px #612871 solid;
     /*
-    border: 3px #00dc76 solid;
+    border: 3px #612871 solid;
     */
     border-radius: 14px 0px 0px 14px;
 }
@@ -154,9 +155,8 @@
     left: -1px;
     bottom: -2px;
     right: 0px;
-    border: 3px #612871 solid;
     /*
-    border: 3px #0062dc solid;
+        border: 3px #612871 solid;
     */
     border-radius: 14px 0px 0px 14px;
 }
@@ -178,11 +178,8 @@
 .eolquestion_block.Media .separator {
     height: 100%;
     background-color: #612871;
-    /*
-    background-color: #612871;
-    */
     top: 0px;
-    width: 4px;
+    width: 6px;
     left: calc(10px + 23px + 10px);
 }
 
@@ -192,20 +189,11 @@
     top: -2px;
     bottom: -2px;
     width: 4px;
-    background-color: #612871;
-    border: 1px #612871 solid;
-    /*
-    background-color: #612871;
-    border: 1px #612871 solid;
-    */
 }
 
 .eolquestion_block.Media-Control .separator {
     height: 100%;
     background-color: #612871;
-    /*
-    background-color: #00dc76;
-    */
     top: 0px;
     width: 5px;
     left: calc(10px + 23px + 10px);
@@ -217,20 +205,10 @@
     top: -2px;
     bottom: -2px;
     width: 4px;
-    background-color: #612871;
-    border: 1px #612871 solid;
-    /*
-    background-color: #00dc76;
-    border: 1px #00dc76 solid;
-    */
 }
 
 .eolquestion_block.Media-Calificada .separator {
     height: 100%;
-    background-color: #612871;
-    /*
-    background-color: #0062dc;
-    */
     top: 0px;
     width: 5px;
     left: calc(10px + 23px + 10px);
@@ -242,12 +220,6 @@
     top: -2px;
     bottom: -2px;
     width: 4px;
-    background-color: #612871;
-    border: 1px #612871 solid;
-    /*
-    background-color: #0062dc;
-    border: 1px #0062dc solid;
-    */
 }
 
 .eolquestion_block.Media .Control {
@@ -313,10 +285,143 @@
 .eolquestion_block.Didactica .text {
     margin-left: calc(10px + 45px + 10px);
     line-height: 25px;
-    padding-top: 12px;
+    padding-top: 12px;   
+    /*background-color: #0062dc; */
+    border: 1px /* #0062dc solid */;
     padding-bottom: 12px;
 }
 
+.eolquestion_block.Didactica .index-number {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -12.5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.eolquestion_block.Didactica .separator {
+    height: 100%;
+    background-color: #e71f24;
+    top: 0px;
+    width: 4px;
+    left: calc(10px + 34px + 10px);
+}
+
+.eolquestion_block.Didactica .separator:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    width: 4px;
+    background-color: #e71f24;
+    border: 1px #e71f24 solid;
+}
+
+.eolquestion_block.Didactica-Control .separator {
+    height: 100%;
+    background-color: #e71f24;
+    top: 0px;
+    width: 5px;
+    left: calc(10px + 34px + 10px);
+}
+
+.eolquestion_block.Didactica-Control .separator:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    width: 4px;
+    background-color: #e71f24;
+    border: 1px #e71f24 solid;
+}
+
+.eolquestion_block.Didactica-Calificada .separator {
+    height: 100%;
+    background-color: #e71f24;
+    top: 0px;
+    width: 5px;
+    left: calc(10px + 34px + 10px);
+}
+
+.eolquestion_block.Didactica-Calificada .separator:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    width: 4px;
+    background-color: #e71f24;
+    border: 1px #e71f24 solid;
+}
+
+.eolquestion_block.Didactica .No-Calificada {
+    background-color: #e71f24 !important;
+}
+
+/* CSS RedFid */
+
+
+.eolquestion_block.RedFid{
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: block;
+    margin: 20px auto;
+    background-color: #fff0;
+}
+
+.eolquestion_block.RedFid .index {
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    border-radius: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    position: absolute;
+    top: calc(50% - 28px);
+    left: 10px;
+    padding-top: 16px;
+}
+
+.eolquestion_block.RedFid .index .index-number{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.eolquestion_block.RedFid .separator {
+    width: 1px;
+    height: 40px;
+    background-color: #fff0;
+    /*color: #fff;*/
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(10px + 25px + 10px);
+    float: left;
+}
+
+.eolquestion_block.RedFid .text {
+    color: #282828;
+    font-weight: bold;
+    text-align: justify;
+    position: relative;
+    margin-left: calc(42px + 25px + 10px);
+    font-size: 16.45px;
+}
+
+.eolquestion_block.RedFid .Calificada {
+    background-color: #0C8AA8;
+}
+
+.eolquestion_block.RedFid .No-Calificada {
+    background-color: #0C8AA8;
+}
+
+.eolquestion_block.RedFid .Control {
+    background-color: #0C8AA8 ;
+}
 .eolquestion_block.Didactica .index-number {
     position: absolute;
     top: 50%;

@@ -1,13 +1,16 @@
 {% load i18n %}
 
-<div class="eolquestion_block {{xblock.theme}} {% if xblock.type == 'No Calificada' %} {{xblock.theme}}-No-Calificada {% else %} {{xblock.theme}}-{{xblock.type}} {% endif %}">
-    <div class="q-tooltip index {% if xblock.type == 'No Calificada' %} No-Calificada {% else %} {{xblock.type}} {% endif %}">
+<div class="eolquestion_block {{xblock.theme}} {% if xblock.type == 'No Calificada' %} {{xblock.theme}}-No-Calificada {% else %} {{xblock.theme}}-{{xblock.type}} {% endif %}"
+    id="questionstatement_{{xblock.idspecific}}" style=" border-color: {{xblock.color}} ">
+    <div class="q-tooltip index {% if xblock.type == 'No Calificada' %} No-Calificada {% else %} {{xblock.type}} {% endif %}"
+        style="background-color: {{xblock.color}}!important">
         <span class="index-number">{{xblock.index}}</span>
         <span class="q-tooltiptext">{% trans "Pregunta" %} {{xblock.type}}</span>
     </div>
-    <div class="separator"></div>
+    <div class="separator" {% if xblock.theme == 'Media' %}  style="background-color: {{xblock.color}}!important;" {% endif %}></div>
     <div class="text">
         {{xblock.text | safe}}
     </div>
-    <div style="clear:both;"></div>
+    <div style="clear:both;">
+    </div>
 </div>
