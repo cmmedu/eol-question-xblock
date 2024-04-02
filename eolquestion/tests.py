@@ -119,8 +119,8 @@ class TestEolQuestionXBlock(UrlResetMixin, ModuleStoreTestCase):
         self.assertEqual(self.xblock.text, 'Enunciado ')
         self.assertEqual(self.xblock.index, 1)
         self.assertEqual(self.xblock.theme, 'SumaySigue')
-        self.assertEqual(self.xblock.color, 'e71f24')
-        self.assertEqual(self.xblock.idspecific, '0')
+        self.assertEqual(self.xblock.color, '#e71f24')
+        self.assertEqual(self.xblock.idspecific, '1')
 
     def test_student_view(self):
         """
@@ -142,8 +142,8 @@ class TestEolQuestionXBlock(UrlResetMixin, ModuleStoreTestCase):
             'index': 7,
             'text': 'Texto Enunciado',
             'theme': 'Media',
-            'color': 'e71f24',
-            'idspecific': '0'
+            'color': '#e71f24',
+            'idspecific': '1'
         }
         data = json.dumps(post_data)
         request.body = data
@@ -154,5 +154,5 @@ class TestEolQuestionXBlock(UrlResetMixin, ModuleStoreTestCase):
         self.assertEqual(self.xblock.index, 7)
         self.assertEqual(self.xblock.text, 'Texto Enunciado')
         self.assertEqual(self.xblock.theme, 'Media')
-        self.assertEqual(self.xblock.color, 'e71f24')
-        self.assertEqual(self.xblock.idspecific, '0')
+        self.assertEqual(self.xblock.color, '#e71f24')
+        self.assertEqual(self.xblock.idspecific, '1')
