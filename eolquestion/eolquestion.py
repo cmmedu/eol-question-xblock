@@ -90,8 +90,10 @@ class EolQuestionXBlock(XBlock):
         context_html = self.get_context()
         template = self.render_template('static/html/eolquestion.html', context_html)
         frag = Fragment(template)
-        frag.add_css(self.resource_string("static/css/eolquestion.css"))
+        frag.add_css(self.resource_string("static/css/eolquestion.css"))        
+        frag.add_javascript(self.resource_string("static/js/src/mathJax.js"))
         frag.add_javascript(self.resource_string("static/js/src/eolquestion.js"))
+
         frag.initialize_js('EolQuestionXBlock')
         return frag
 
