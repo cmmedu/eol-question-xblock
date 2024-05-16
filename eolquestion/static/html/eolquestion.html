@@ -1,7 +1,4 @@
 {% load i18n %}
-<script>
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);// Renderiza MathJax nuevamente
-</script>
 <div class="eolquestion_block {{xblock.theme}} {% if xblock.type == 'No Calificada' %} {{xblock.theme}}-No-Calificada {% else %} {{xblock.theme}}-{{xblock.type}} {% endif %}"
     id="questionstatement_{{xblock.idspecific}}" style=" border-color: {{xblock.color}} ">
     <div class="q-tooltip index {% if xblock.type == 'No Calificada' %} No-Calificada {% else %} {{xblock.type}} {% endif %}"

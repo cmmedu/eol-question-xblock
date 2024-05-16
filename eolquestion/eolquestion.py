@@ -63,12 +63,19 @@ class EolQuestionXBlock(XBlock):
         scope = Scope.settings
     )
 
+    #Asignacion a de color preguntas antiguas
+    prevDefautltColor = '#e71f24'
+    if theme == "Media":
+        prevDefautltColor = '#612871'
+    elif theme == "RedFid":
+        prevDefautltColor = '#0c8aa8'
+
     # COLOR
     color = String(
         display_name = _("Color"),
         help = _("Color de la pregunta"),
-        default = '#e71f24',
         values = { "minlength" : 4 },
+        default = prevDefautltColor,
         scope = Scope.settings
     )
 
