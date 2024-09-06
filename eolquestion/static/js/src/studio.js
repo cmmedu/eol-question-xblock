@@ -14,6 +14,8 @@ function EolQuestionStudioXBlock(runtime, element) {
         colorInput.val('#0C8AA8');
       } else if (theme === "Didactica") {
         colorInput.val('#e71f24');
+      } else if (theme === "SumoPrimero") {
+        colorInput.val('#f98dbf');
       }
     });
 

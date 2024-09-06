@@ -59,7 +59,7 @@ class EolQuestionXBlock(XBlock):
         display_name = _("Estilo"),
         help = _("Cambiar estilo de la pregunta"),
         default = "SumaySigue",
-        values = ["SumaySigue", "Media", "Didactica","RedFid"],
+        values = ["SumaySigue", "Media", "Didactica","RedFid","SumoPrimero"],
         scope = Scope.settings
     )
 
@@ -69,6 +69,8 @@ class EolQuestionXBlock(XBlock):
         prevDefautltColor = '#612871'
     elif theme == "RedFid":
         prevDefautltColor = '#0c8aa8'
+    elif theme == "SumoPrimero":
+        prevDefautltColor = '#f98dbf'
 
     # COLOR
     color = String(
@@ -197,6 +199,10 @@ class EolQuestionXBlock(XBlock):
                 <eolquestion
                     theme='RedFid'
                     type='Control'
+                />
+                   <eolquestion
+                    theme='SumoPrimero'
+                    type='No Calificada'
                 />
                 </vertical_demo>
              """),
