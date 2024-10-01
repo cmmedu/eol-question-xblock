@@ -77,7 +77,7 @@ class EolQuestionXBlock(XBlock):
     idspecific = String(
         display_name = _("ID específico"),
         help = _("definir un identificador para la pregunta"),
-        default = '1',
+        default = "1",
         values = { "minlength" : 1 },
         scope = Scope.settings
     )
@@ -92,10 +92,12 @@ class EolQuestionXBlock(XBlock):
         template = self.render_template('static/html/eolquestion.html', context_html)
         frag = Fragment(template)
         frag.add_css(self.resource_string("static/css/eolquestion.css"))        
-        frag.add_javascript(self.resource_string("static/js/src/mathJax.js"))
         frag.add_javascript(self.resource_string("static/js/src/eolquestion.js"))
 
-        frag.initialize_js('EolQuestionXBlock')
+        settings = {
+            'sublocation'  : str(self.location).split('@')[-1],
+        }
+        frag.initialize_js('EolQuestionXBlock', json_args=settings)
         return frag
 
     def studio_view(self, context=None):
@@ -127,6 +129,7 @@ class EolQuestionXBlock(XBlock):
             'field_theme': self.fields['theme'],
             'field_color': self.fields['color'],
             'field_idspecific': self.fields['idspecific'],
+            'sublocation' : str(self.location).split('@')[-1],
             'xblock': self
         }
     
