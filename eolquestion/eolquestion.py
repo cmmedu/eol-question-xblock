@@ -59,23 +59,17 @@ class EolQuestionXBlock(XBlock):
         display_name = _("Estilo"),
         help = _("Cambiar estilo de la pregunta"),
         default = "SumaySigue",
-        values = ["SumaySigue", "Media", "Didactica","RedFid"],
+        values = ["SumaySigue", "Media", "Didactica","RedFid","SumoPrimero"],
         scope = Scope.settings
     )
 
-    #Asignacion a de color preguntas antiguas
-    prevDefautltColor = '#e71f24'
-    if theme == "Media":
-        prevDefautltColor = '#612871'
-    elif theme == "RedFid":
-        prevDefautltColor = '#0c8aa8'
 
     # COLOR
     color = String(
         display_name = _("Color"),
         help = _("Color de la pregunta"),
         values = { "minlength" : 4 },
-        default = prevDefautltColor,
+        default = "#e71f24",
         scope = Scope.settings
     )
 
@@ -83,7 +77,7 @@ class EolQuestionXBlock(XBlock):
     idspecific = String(
         display_name = _("ID específico"),
         help = _("definir un identificador para la pregunta"),
-        default = '1',
+        default = "1",
         values = { "minlength" : 1 },
         scope = Scope.settings
     )
@@ -98,10 +92,12 @@ class EolQuestionXBlock(XBlock):
         template = self.render_template('static/html/eolquestion.html', context_html)
         frag = Fragment(template)
         frag.add_css(self.resource_string("static/css/eolquestion.css"))        
-        frag.add_javascript(self.resource_string("static/js/src/mathJax.js"))
         frag.add_javascript(self.resource_string("static/js/src/eolquestion.js"))
 
-        frag.initialize_js('EolQuestionXBlock')
+        settings = {
+            'sublocation'  : str(self.location).split('@')[-1],
+        }
+        frag.initialize_js('EolQuestionXBlock', json_args=settings)
         return frag
 
     def studio_view(self, context=None):
@@ -133,6 +129,7 @@ class EolQuestionXBlock(XBlock):
             'field_theme': self.fields['theme'],
             'field_color': self.fields['color'],
             'field_idspecific': self.fields['idspecific'],
+            'sublocation' : str(self.location).split('@')[-1],
             'xblock': self
         }
     
@@ -197,6 +194,10 @@ class EolQuestionXBlock(XBlock):
                 <eolquestion
                     theme='RedFid'
                     type='Control'
+                />
+                   <eolquestion
+                    theme='SumoPrimero'
+                    type='No Calificada'
                 />
                 </vertical_demo>
              """),
