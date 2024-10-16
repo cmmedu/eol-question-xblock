@@ -9,17 +9,17 @@ function EolQuestionXBlock(runtime, element, settings) {
         renderMathForSpecificElements(questiontextid);
     });
 
+}
 
-    function renderMathForSpecificElements(id) {
-        if (typeof MathJax !== "undefined") {
-            var $questiontext = $('#' + id);
-            if ($questiontext.length) {
-                $questiontext.find('.persistent-btn','modal-content-persistent').each(function (index, questextelem) {
-                    MathJax.Hub.Queue(["Typeset", MathJax.Hub, questextelem]);
-                });
-            }
-        } else {
-            console.warn("MathJax no está cargado.");
+function renderMathForSpecificElements(id) {
+    if (typeof MathJax !== "undefined") {
+        var $questiontext = $('#' + id);
+        if ($questiontext.length) {
+            $questiontext.find('.persistent-btn','modal-content-persistent').each(function (index, questextelem) {
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, questextelem]);
+            });
         }
+    } else {
+        console.warn("MathJax no está cargado.");
     }
 }
