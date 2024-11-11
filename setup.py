@@ -25,7 +25,7 @@ def package_data(pkg, roots):
 
 setup(
     name='eolquestion-xblock',
-    version='1.0.2',
+    version='1.0.0',
     description='XBlock con enunciados Suma y Sigue de CMMEduFormacion',
     license='AGPL v3',         
     packages=[
